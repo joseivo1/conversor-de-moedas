@@ -6,8 +6,9 @@ import { FormsModule } from "@angular/forms";
 import { ConversorComponent } from "./components";
 import { MoedaService } from "./services";
 import { ConversorService } from "./services";
+import { NumeroDirective } from "./directives";
 @NgModule({
-  declarations: [ConversorComponent],
+  declarations: [ConversorComponent, NumeroDirective],
   imports: [CommonModule, HttpClientModule, FormsModule],
   providers: [MoedaService, ConversorService],
   exports: [ConversorComponent],

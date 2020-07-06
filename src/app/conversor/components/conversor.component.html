@@ -13,6 +13,7 @@
         name="valor"
         class="form-control text-right"
         placeholder="0"
+        numero
         [(ngModel)]="conversao.valor"
         required
       />
@@ -28,7 +29,9 @@
       </select>
       <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
       <select name="moedaPara" class="form-control" required>
-        <option> </option>
+        <option *ngFor="let moeda of moedas" [value]="moeda.sigla">
+          {{ moeda.sigla }} - {{ moeda.descricao }}
+        </option>
       </select>
       <input
         type="submit"
